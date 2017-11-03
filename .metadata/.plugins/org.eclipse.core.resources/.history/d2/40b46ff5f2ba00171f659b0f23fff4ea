@@ -1,0 +1,28 @@
+package exercise3;
+
+public class t1 {
+	public static void main(String[] args) {
+		
+	}
+}
+
+public class Shape{
+	String color;
+	boolean filled;
+	public Shape() {
+		color = "red";
+		filled = true;
+	}
+	public Shape(String c , boolean f) {
+		color = c;
+		filled =f;
+	}
+	public String getColor() {return color;}
+	public boolean isFilled() {return filled;}
+	public void setColor(String c) {color = c;}
+	public void setfilled(boolean f) {filled = f;}
+	public String toString()
+	{
+		System.out.println("xxx");
+	}
+}
