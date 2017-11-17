@@ -18,19 +18,18 @@ public class MovablePoint implements Movable { // saved as "MovablePoint.java"
 	}
 	@Override
 	public void moveDown() {
-		// TODO Auto-generated method stub
+		y+=ySpeed;
 	}
 	@Override
 	public void moveRight() {
-		// TODO Auto-generated method stub
-		
+		x-=xSpeed;
 	}
 	@Override
 	public void moveLeft() {
-		// TODO Auto-generated method stub
-		
+		x+=xSpeed;
 	}
 	public String toString() {
-		return "";
+		return "The point in (" + x + "," +y+ ") and will move in speed (" + xSpeed 
+				+ "," + ySpeed +").";
 	}
 }

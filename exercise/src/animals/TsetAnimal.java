@@ -16,7 +16,7 @@ public class TsetAnimal {
 		animal2.greeting();    
 		Animal animal3 = new BigDog();     
 		animal3.greeting();    
-		//Animal animal4 = new Animal();              
+		//Animal animal4 = new Animal();  //cannot Cannot instantiate the type Animal an abstract class           
 		// Downcast      
 		Dog dog2 = (Dog)animal2;    
 		BigDog bigDog2 = (BigDog)animal3;  

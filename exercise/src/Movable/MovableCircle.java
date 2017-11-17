@@ -18,17 +18,22 @@ public class MovableCircle implements Movable { // saved as "MovableCircle.java"
 	}
 	@Override
 	public void moveDown() {
-		// TODO Auto-generated method stub
+		
+		center.y += center.ySpeed;
 		
 	}
 	@Override
 	public void moveRight() {
-		// TODO Auto-generated method stub
+		center.x -= center.ySpeed;
 		
 	}
 	@Override
 	public void moveLeft() {
-		// TODO Auto-generated method stub
+		center.x += center.ySpeed;
 		
+	}
+	public String toString() {
+		return "The "+radius+" radius circle in (" + center.x + "," +center.y+ ") and will move in speed (" 
+	+ center.xSpeed + "," + center.ySpeed +").";
 	}
 }

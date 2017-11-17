@@ -3,12 +3,12 @@ package exercise3;
 public class t2 {
 	public static void main(String[] args) {
 		ShapeA s1 = new CircleA(5.5, "RED", false);  // Upcast Circle to Shape 
-		System.out.println(s1);                    // which version? 
-		System.out.println(s1.getArea());          // which version? 
-		System.out.println(s1.getPerimeter());     // which version? 
+		System.out.println(s1);                    // which version? circle.toString()
+		System.out.println(s1.getArea());          // which version? circle.getArea()
+		System.out.println(s1.getPerimeter());     // which version? circle.getPerimrter()
 		System.out.println(s1.getColor()); 
 		System.out.println(s1.isFilled()); 
-		//System.out.println(s1.getRadius());     
+		//System.out.println(s1.getRadius());  	//shape has no getRadius()
 		CircleA c1 = (CircleA)s1;                   // Downcast back to Circle 
 		System.out.println(c1); 
 		System.out.println(c1.getArea()); 
@@ -16,12 +16,12 @@ public class t2 {
 		System.out.println(c1.getColor()); 
 		System.out.println(c1.isFilled()); 
 		System.out.println(c1.getRadius());     
-		//ShapeA s2 = new ShapeA();     
+		//ShapeA s2 = new ShapeA();     			//cannot instance abstract class
 		ShapeA s3 = new RectangleA(1.0, 2.0, "RED", false);   // Upcast 
 		System.out.println(s3); System.out.println(s3.getArea());
 		System.out.println(s3.getPerimeter()); 
 		System.out.println(s3.getColor()); 
-		//System.out.println(s3.getLength());     
+		//System.out.println(s3.getLength());    //shape has no getLength()
 		RectangleA r1 = (RectangleA)s3;   // downcast 
 		System.out.println(r1); 
 		System.out.println(r1.getArea());
@@ -31,13 +31,16 @@ public class t2 {
 		System.out.println(s4); 
 		System.out.println(s4.getArea());
 		System.out.println(s4.getColor());
-		//System.out.println(s4.getSide());    // Take note that we downcast Shape s4 to Rectangle,  //  which is a superclass of Square, instead of Square 
+		//System.out.println(s4.getSide());    //shape has no getSize()
+		// Take note that we downcast Shape s4 to Rectangle,  
+		//  which is a superclass of Square, instead of Square 
 		RectangleA r2 = (RectangleA)s4; 
 		System.out.println(r2); 
 		System.out.println(r2.getArea()); 
 		System.out.println(r2.getColor()); 
-		//System.out.println(r2.getSide()); 
-		System.out.println(r2.getLength());     // Downcast Rectangle r2 to Square 
+		//System.out.println(r2.getSide()); 	//reg has no getSide()
+		System.out.println(r2.getLength());     
+		// Downcast Rectangle r2 to Square 
 		SquareA sq1 = (SquareA)r2; 
 		System.out.println(sq1); 
 		System.out.println(sq1.getArea()); 
@@ -63,7 +66,7 @@ abstract class ShapeA{
 	public void setfilled(boolean f) {filled = f;}
 	public abstract double getArea();
 	public abstract double getPerimeter();
-	public abstract double getSize();
+	//public abstract double getSize();
 	public String toString(){
 		return "A shape with " + getColor() + "and it is " + isFilled() + "ly filled." ;
 	}
