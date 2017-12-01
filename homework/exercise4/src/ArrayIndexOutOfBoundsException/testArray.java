@@ -1,26 +1,22 @@
 package ArrayIndexOutOfBoundsException;
+
 import java.util.*;
+
 public class testArray {
-		public static int At(int arr[],int a)
-		{
-			if(a >= 100)
-			{
-				throw new ArrayIndexOutOfBoundsException();
-			}
-			return arr[a];
+	public static void main(String[] args) {
+		int[] arr = new int[100];
+		for(int i=0; i <100; ++i) {
+			arr[i] = i;
 		}
-		public static void main(String args) {
-			int[] arr = new int[100];
-			Scanner input = new Scanner(System.in);
-			int index = input.nextInt();
-			try {
-				System.out.println(At(arr,index));
-			}
-			catch(ArrayIndexOutOfBoundsException ex) {
-				System.out.println("ArrayIndexOutOfBoundsException");
-			}
-			
+		Scanner input = new Scanner(System.in);
+		System.out.print("which number wiil you get? ");
+		int index = input.nextInt();
+		try {
+			System.out.println(arr[index]);
+		} catch (ArrayIndexOutOfBoundsException ex) {
+			System.out.println("ArrayIndexOutOfBoundsException");
 		}
-	
+
+	}
 
 }

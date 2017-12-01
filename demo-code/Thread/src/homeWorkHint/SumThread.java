@@ -1,4 +1,4 @@
-package test;
+package homeWorkHint;
 
 /**
  * This thread finds the sum of a subsection of an array.

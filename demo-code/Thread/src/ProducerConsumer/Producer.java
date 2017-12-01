@@ -1,4 +1,4 @@
-package test;
+package ProducerConsumer;
 
 class Producer extends Thread {
 	  Queue queue;

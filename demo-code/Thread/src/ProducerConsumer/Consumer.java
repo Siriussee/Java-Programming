@@ -1,5 +1,4 @@
-package test;
-
+package ProducerConsumer;
 class Consumer extends Thread {
 	  String str;
 	  Queue queue;

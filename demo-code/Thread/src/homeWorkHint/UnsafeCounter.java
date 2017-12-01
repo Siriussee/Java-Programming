@@ -1,4 +1,4 @@
-package test;
+package homeWorkHint;
 
 public class UnsafeCounter {
     private int count;

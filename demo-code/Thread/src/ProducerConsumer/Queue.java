@@ -1,4 +1,4 @@
-package test;
+package ProducerConsumer;
 
 class Queue {
 	private final static int SIZE = 10;
