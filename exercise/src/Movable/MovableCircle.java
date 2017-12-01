@@ -24,12 +24,12 @@ public class MovableCircle implements Movable { // saved as "MovableCircle.java"
 	}
 	@Override
 	public void moveRight() {
-		center.x -= center.ySpeed;
+		center.x -= center.xSpeed;
 		
 	}
 	@Override
 	public void moveLeft() {
-		center.x += center.ySpeed;
+		center.x += center.xSpeed;
 		
 	}
 	public String toString() {
