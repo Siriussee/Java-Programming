@@ -3,4 +3,6 @@
 <fullyQualifiedTypeName name="java.lang.System"/>
 <fullyQualifiedTypeName name="org.controlsfx.dialog.Dialog"/>
 <fullyQualifiedTypeName name="org.controlsfx.dialog.Dialogs"/>
+<fullyQualifiedTypeName name="javafx.stage.Modality"/>
+<fullyQualifiedTypeName name="address.view.PersonEditDialogController"/>
 </qualifiedTypeNameHistroy>
