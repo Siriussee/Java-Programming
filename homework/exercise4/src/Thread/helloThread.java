@@ -10,7 +10,7 @@ public class helloThread extends Thread {
 	}
 
 	public void run() {
-		if (count < 49) {
+		if (count < 50) {
 			helloThread t = new helloThread();	//Recursively create new helloThread
 			t.start();
 			try {
