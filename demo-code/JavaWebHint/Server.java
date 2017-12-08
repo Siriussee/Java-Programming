@@ -1,4 +1,4 @@
-package inheritance;
+
 import java.io.*;
 import java.net.*;
 
