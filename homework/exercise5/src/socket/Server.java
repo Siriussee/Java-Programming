@@ -2,8 +2,9 @@ package socket;
 
 import java.io.*;
 import java.net.*;
+import java.util.Scanner;
 
-public class Server extends Thread {
+public class Server {
 	public ServerSocket svrSocket = null;
 	public Socket socket = null;
 	public InputStream inputStream = null;
@@ -37,11 +38,10 @@ public class Server extends Thread {
 
 	public void readSocket() {
 		try {
+
 			message = dataStream.readUTF();
-			System.out.println(message + "\n");
-			if (message.equals("Exit")) {
-				System.exit(0);
-			}
+			System.out.println(">> " + message + "\n");
+
 		} catch (UnknownHostException e) {
 			System.out.println("Error : Cannot find server." + e);
 		} catch (IOException e) {
@@ -51,16 +51,15 @@ public class Server extends Thread {
 
 	public void writeSocket() {
 		try {
-			String initmsg_r = new String("Enter your message: ");
+			
+			String initmsg_r = new String("<< ");
 			dataoutputStream.writeUTF(initmsg_r);
-			System.out.print("Enter please for ready... ");
-			message = charStream.readLine();
-			if (!message.equals("Exit"))
-				return;
-			else {
-				dataoutputStream.writeUTF("Exit");
-				System.exit(0);
-			}
+			System.out.print("<< ");
+			Scanner input = new Scanner(System.in);
+			String messageToSend = input.nextLine();
+			dataoutputStream.writeUTF(messageToSend);
+			//message = charStream.readLine();
+
 		} catch (UnknownHostException e) {
 			System.out.println("Error : Cannot find server." + e);
 		} catch (IOException e) {
@@ -75,6 +74,5 @@ public class Server extends Thread {
 			svr.readSocket();
 		}
 	}
-
 }
 // End of Server
