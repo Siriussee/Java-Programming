@@ -5,4 +5,16 @@
 <fullyQualifiedTypeName name="org.controlsfx.dialog.Dialogs"/>
 <fullyQualifiedTypeName name="javafx.stage.Modality"/>
 <fullyQualifiedTypeName name="address.view.PersonEditDialogController"/>
+<fullyQualifiedTypeName name="javax.xml.bind.JAXBContext"/>
+<fullyQualifiedTypeName name="javax.xml.bind.Marshaller"/>
+<fullyQualifiedTypeName name="ch.makery.address.model.PersonListWrapper"/>
+<fullyQualifiedTypeName name="javax.xml.bind.Unmarshaller"/>
+<fullyQualifiedTypeName name="ch.makery.address.MainApp"/>
+<fullyQualifiedTypeName name="javafx.stage.FileChooser"/>
+<fullyQualifiedTypeName name="java.io.File"/>
+<fullyQualifiedTypeName name="javafx.fxml.FXML"/>
+<fullyQualifiedTypeName name="ch.makery.address.util.LocalDateAdapter"/>
+<fullyQualifiedTypeName name="javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter"/>
+<fullyQualifiedTypeName name="ch.makery.address.view.RootLayoutController"/>
+<fullyQualifiedTypeName name="java.util.prefs.Preferences"/>
 </qualifiedTypeNameHistroy>
