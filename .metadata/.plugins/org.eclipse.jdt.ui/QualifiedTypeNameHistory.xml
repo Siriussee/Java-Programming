@@ -17,4 +17,5 @@
 <fullyQualifiedTypeName name="javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter"/>
 <fullyQualifiedTypeName name="ch.makery.address.view.RootLayoutController"/>
 <fullyQualifiedTypeName name="java.util.prefs.Preferences"/>
+<fullyQualifiedTypeName name="ch.makery.address.view.BirthdayStatisticsController"/>
 </qualifiedTypeNameHistroy>

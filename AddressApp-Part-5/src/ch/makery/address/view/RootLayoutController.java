@@ -107,6 +107,13 @@ public class RootLayoutController {
 		alert.setContentText("Lecture design of Java");
 		alert.showAndWait();
     }
+    /**
+     * Opens the birthday statistics.
+     */
+    @FXML
+    private void handleShowBirthdayStatistics() {
+      mainApp.showBirthdayStatistics();
+    }
 
     /**
      * Closes the application.
