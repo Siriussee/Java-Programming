@@ -3,9 +3,10 @@ package socket;
 import java.net.*;
 import java.io.*;
 
-public class Client {
+public class Client extends Thread {
 
-	public static void main(String args[]) {
+	public void run() {
+		// public static void main(String args[]) { //use Thread now
 		// Initialize the stream
 		OutputStream outputStream = null;
 		DataOutputStream dataoutputStream = null;
@@ -18,7 +19,7 @@ public class Client {
 		String message;
 
 		try {
-			charStream = new BufferedReader(new InputStreamReader(System.in));
+			charStream = new BufferedReader(new InputStreamReader(System.in));	//wrap system.in, so no scanner
 			message = new String("Hi! I am a client");
 			socket = new Socket("127.0.0.1", 1056);
 			dataStream = new DataInputStream(inputStream);
@@ -33,15 +34,14 @@ public class Client {
 
 		while (true) {
 			try {
-
 				inputStream = socket.getInputStream();
 				dataStream = new DataInputStream(inputStream);
-				message = dataStream.readUTF();
-				System.out.print(message);
-
-				message = charStream.readLine();
-				dataoutputStream.writeUTF(message);
-
+				
+				message = dataStream.readUTF();			//read & print message from server(include >>)
+				System.out.print(message);	
+				message = charStream.readLine();		//read what you what to say
+				dataoutputStream.writeUTF(message);		//send to server
+				
 			} catch (UnknownHostException e) {
 				System.out.println("Error : Cannot find server." + e);
 			} catch (IOException e) {

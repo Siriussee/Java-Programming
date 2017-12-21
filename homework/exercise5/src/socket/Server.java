@@ -2,7 +2,6 @@ package socket;
 
 import java.io.*;
 import java.net.*;
-import java.util.Scanner;
 
 public class Server {
 	public ServerSocket svrSocket = null;
@@ -38,10 +37,15 @@ public class Server {
 
 	public void readSocket() {
 		try {
-
-			message = dataStream.readUTF();
-			System.out.println(">> " + message + "\n");
-
+			
+			
+			message = dataStream.readUTF();		//get message from client
+			System.out.println(message);		//print it
+			
+			
+			if (message.equals("Exit")) {
+				System.exit(0);
+			}
 		} catch (UnknownHostException e) {
 			System.out.println("Error : Cannot find server." + e);
 		} catch (IOException e) {
@@ -52,14 +56,17 @@ public class Server {
 	public void writeSocket() {
 		try {
 			
-			String initmsg_r = new String("<< ");
-			dataoutputStream.writeUTF(initmsg_r);
-			System.out.print("<< ");
-			Scanner input = new Scanner(System.in);
-			String messageToSend = input.nextLine();
-			dataoutputStream.writeUTF(messageToSend);
-			//message = charStream.readLine();
-
+			System.out.print(">> ");							//mind you to say sth
+			message = charStream.readLine();					//say sth
+			dataoutputStream.writeUTF(message + '\n' + ">> ");	//send message to client, and tell him to say sth
+			
+			
+			if (!message.equals("Exit"))
+				return;
+			else {
+				dataoutputStream.writeUTF("Exit");
+				System.exit(0);
+			}
 		} catch (UnknownHostException e) {
 			System.out.println("Error : Cannot find server." + e);
 		} catch (IOException e) {
@@ -75,4 +82,3 @@ public class Server {
 		}
 	}
 }
-// End of Server
