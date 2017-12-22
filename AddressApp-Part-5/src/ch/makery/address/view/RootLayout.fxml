@@ -28,11 +28,11 @@
         <MenuItem mnemonicParsing="false" text="Delete" />
       </items>
     </Menu>
-            <Menu mnemonicParsing="false" text="Statistcs">
-              <items>
-                <MenuItem mnemonicParsing="false" onAction="#handleShowBirthdayStatistics" text="Show Statistcs" />
-              </items>
-            </Menu>
+    <Menu mnemonicParsing="false" text="Statistcs">
+       <items>
+        <MenuItem mnemonicParsing="false" onAction="#handleShowBirthdayStatistics" text="Show Statistcs" />
+       </items>
+    </Menu>
     <Menu mnemonicParsing="false" text="Help">
       <items>
         <MenuItem mnemonicParsing="false" onAction="#handleAbout" text="About" />

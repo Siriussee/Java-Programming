@@ -107,6 +107,7 @@ public class RootLayoutController {
 		alert.setContentText("Lecture design of Java");
 		alert.showAndWait();
     }
+    
     /**
      * Opens the birthday statistics.
      */
