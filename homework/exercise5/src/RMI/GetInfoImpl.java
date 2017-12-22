@@ -33,7 +33,7 @@ public class GetInfoImpl extends UnicastRemoteObject implements GetInfo {
 		try {
 			GetInfoImpl obj = new GetInfoImpl();
 			LocateRegistry.createRegistry(6600);
-			// Bind this object instance to the name "HelloServer"
+			// Bind this object instance to the name "GetInfoServer"
 			Naming.rebind("rmi://127.0.0.1:6600/GetInfoServer", obj);
 			System.out.println("GetInfoServer bound in registry");
 		} catch (Exception e) {

@@ -23,5 +23,5 @@ public class GetInfoClient {
 	} 
     System.out.println(message);
   } // end of main
-} // end of HelloClient
+} // end of Client
 

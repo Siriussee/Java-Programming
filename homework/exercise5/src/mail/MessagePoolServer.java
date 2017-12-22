@@ -3,6 +3,7 @@ package mail;
 import java.net.MalformedURLException;
 import java.rmi.Naming;
 import java.rmi.RemoteException;
+import java.rmi.registry.LocateRegistry;
 import java.rmi.server.UnicastRemoteObject;
 import java.util.LinkedList;
 import java.util.Queue;
@@ -56,7 +57,8 @@ public class MessagePoolServer extends UnicastRemoteObject implements MessagePoo
 
     public static void main(String... args) throws RemoteException, MalformedURLException {
         MessagePoolServer obj = new MessagePoolServer();
-        Naming.rebind("mess",obj);
+        LocateRegistry.createRegistry(6600);
+        Naming.rebind("rmi://127.0.0.1:6600/MailServer", obj);
         System.out.println("In registry");
     }
 }

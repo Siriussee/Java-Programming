@@ -32,7 +32,7 @@ public class MessagePutClient {
                 String msg="string";
                 while (true){
                     try{
-                        obj = (MessagePool) Naming.lookup("//"+"/mess");
+                        obj = (MessagePool) Naming.lookup("rmi://127.0.0.1:6600/MailServer");
                         obj.put(msg + count);
                         Thread.sleep(time);
                     }catch (Exception e){
