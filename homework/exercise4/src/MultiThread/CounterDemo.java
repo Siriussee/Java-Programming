@@ -17,14 +17,17 @@ public class CounterDemo extends Thread {
 		Counter u = new Counter();
 		CounterDemo u1 = new CounterDemo(u);
 		CounterDemo u2 = new CounterDemo(u);
-		u1.start();
-		u2.start();
+		u1.start();//start u1
+		u2.start();//start u2 immediately, because no u1.join() before
 		try {
 			u1.join();
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		}try {
+		}
+		System.out.println(Thread.currentThread().getName() + " ended, counterX now is "+ u.get());
+		
+		try {
 			u2.join();
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block

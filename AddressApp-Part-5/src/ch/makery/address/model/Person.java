@@ -45,10 +45,10 @@ public class Person {
 		this.lastName = new SimpleStringProperty(lastName);
 		
 		// Some initial dummy data, just for convenient testing.
-		this.street = new SimpleStringProperty("some street");
-		this.postalCode = new SimpleIntegerProperty(1234);
-		this.city = new SimpleStringProperty("some city");
-		this.birthday = new SimpleObjectProperty<LocalDate>(LocalDate.of(1999, 2, 21));
+		this.street = new SimpleStringProperty("Xinggang East Road");
+		this.postalCode = new SimpleIntegerProperty(510006);
+		this.city = new SimpleStringProperty("Guangzhou");
+		this.birthday = new SimpleObjectProperty<LocalDate>(LocalDate.of(2018, 1, 1));
 	}
 	
 	public String getFirstName() {

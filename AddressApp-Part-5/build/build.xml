@@ -18,12 +18,7 @@
 		<delete dir="projectRefs" />
 	
 		<mkdir dir="externalLibs" />
-	
-		<copy todir="externalLibs">
-			<fileset dir="D:\java-dev\java-programming\AddressApp-Part-5\lib">
-				<filename name="controlsfx-8.0.6_20.jar"/>
-			</fileset>
-		</copy>
+
 	
 		<mkdir dir="project" />
 		<copy todir="project">
@@ -39,14 +34,7 @@
 		<mkdir dir="build/src" />
 		<mkdir dir="build/libs" />
 		<mkdir dir="build/classes" />
-	
-		<!-- Copy project-libs references -->
-		<copy todir="build/libs">
-			<fileset dir="externalLibs">
-				<include name="controlsfx-8.0.6_20.jar"/>
-			</fileset>
-		</copy>
-	
+
 		<!-- Copy project references -->
 	
 		<!-- Copy project sources itself -->
@@ -80,12 +68,7 @@
 		<mkdir dir="dist" />
 		<mkdir dir="dist/libs" />
 	
-		<copy todir="dist/libs">
-			<fileset dir="externalLibs">
-				<include name="*" />
-			</fileset>
-		</copy>
-	
+
 	
 		<fx:resources id="appRes">
 			<fx:fileset dir="dist" includes="AddressApp-Part-5.jar"/>
