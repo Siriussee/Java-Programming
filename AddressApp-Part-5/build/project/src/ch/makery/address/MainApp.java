@@ -43,15 +43,19 @@ public class MainApp extends Application {
 	 */
 	public MainApp() {
 		// Add some sample data
-		personData.add(new Person("Hans", "Muster"));
-		personData.add(new Person("Ruth", "Mueller"));
-		personData.add(new Person("Heinz", "Kurz"));
-		personData.add(new Person("Cornelia", "Meier"));
-		personData.add(new Person("Werner", "Meyer"));
-		personData.add(new Person("Lydia", "Kunz"));
-		personData.add(new Person("Anna", "Best"));
-		personData.add(new Person("Stefan", "Meier"));
-		personData.add(new Person("Martin", "Mueller"));
+		personData.add(new Person("Situ", "Wang"));
+		personData.add(new Person("Liang", "Zhuge"));
+		personData.add(new Person("8848", "Taijin-MobliePhone"));
+		personData.add(new Person("Zuanfeng", "Xiao"));
+		personData.add(new Person("Ping", "Ge"));
+		personData.add(new Person("Shou", "Yuan"));
+		personData.add(new Person("Jack", "Ma"));
+		personData.add(new Person("Jun", "Lei"));
+		personData.add(new Person("Jie", "Zhang"));
+		personData.add(new Person("Daxian", "Huang"));
+		personData.add(new Person("Zhaozhong", "Zhang"));
+		personData.add(new Person("Bolan", "Bro"));
+		personData.add(new Person("Gaoyin", "Bro"));
 	}
 
 	@Override

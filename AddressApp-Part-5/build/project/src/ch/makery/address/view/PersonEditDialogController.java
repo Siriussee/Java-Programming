@@ -9,11 +9,6 @@ import javafx.stage.Stage;
 import ch.makery.address.model.Person;
 import ch.makery.address.util.DateUtil;
 
-/**
- * Dialog to edit details of a person.
- * 
- * @author Marco Jakob
- */
 public class PersonEditDialogController {
 
 	@FXML
@@ -64,7 +59,7 @@ public class PersonEditDialogController {
 		postalCodeField.setText(Integer.toString(person.getPostalCode()));
 		cityField.setText(person.getCity());
 		birthdayField.setText(DateUtil.format(person.getBirthday()));
-		birthdayField.setPromptText("dd.mm.yyyy");
+		birthdayField.setPromptText("yyyy.mm.dd");
 	}
 
 	/**

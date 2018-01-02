@@ -13,11 +13,7 @@ import javafx.scene.chart.CategoryAxis;
 import javafx.scene.chart.XYChart;
 import ch.makery.address.model.Person;
 
-/**
- * The controller for the birthday statistics view.
- * 
- * @author Marco Jakob
- */
+
 public class BirthdayStatisticsController {
 
 	@FXML
