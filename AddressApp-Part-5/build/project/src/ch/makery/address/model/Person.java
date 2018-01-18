@@ -41,6 +41,10 @@ public class Person {
 	 * @param lastName
 	 */
 	public Person(String firstName, String lastName) {
+		int randomYear = (int)(Math.random()*20+1990);
+		int randomDate = (int)(Math.random()*28 +1);
+		int randomMonth = (int)(Math.random()*12 +1);
+		
 		this.firstName = new SimpleStringProperty(firstName);
 		this.lastName = new SimpleStringProperty(lastName);
 		
@@ -48,7 +52,7 @@ public class Person {
 		this.street = new SimpleStringProperty("Xinggang East Road");
 		this.postalCode = new SimpleIntegerProperty(510006);
 		this.city = new SimpleStringProperty("Guangzhou");
-		this.birthday = new SimpleObjectProperty<LocalDate>(LocalDate.of(2018, 1, 1));
+		this.birthday = new SimpleObjectProperty<LocalDate>(LocalDate.of(randomYear, randomMonth, randomDate));
 	}
 	
 	public String getFirstName() {
